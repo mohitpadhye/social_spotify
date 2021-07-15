@@ -2,18 +2,20 @@ import React from 'react'
 import './styles/LoginStyles.css'
 // import { FaSpotify } from 'react-icons/fa'
 
-const authEndpoint = 'https://accounts.spotify.com/authorize'
+// const authEndpoint = 'https://accounts.spotify.com/authorize'
 
-const scopes = [
-    'user-read-private',
-    'user-read-recently-played',
-    'user-read-playback-state',
-]
+//const scopes = [
+    //'user-read-private',
+    //'user-read-recently-played',
+    //'user-read-playback-state',
+//]
 
-const clientId = 'c830dd88a7f4488196f3081f0b21efe6'
-const redirectUri = 'http://localhost:3000'
+// const clientId = 'c830dd88a7f4488196f3081f0b21efe6'
+// const redirectUri = 'http://localhost:3000'
 
-const AUTH_URL = `${authEndpoint}?client_id=${clientId}&&response_type=code&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}`
+const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=c830dd88a7f4488196f3081f0b21efe6&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+
+// `${authEndpoint}?client_id=${clientId}&&response_type=code&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}`
 
 export default function Login() {
     return (
